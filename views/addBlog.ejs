@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Add a New Product</title>
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    
+    <div class="container1">
+        <h1 class="recent mb-3">Add a New Product</h1>
+        <form action="/blog" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="title" class="form-label">Product Title</label>
+                <input 
+                type="text" 
+                class="form-control" 
+                id="title" 
+                name="title" 
+                aria-describedby="title"
+                required=""
+                />
+            </div>
+
+            <div class="mb-3">
+                <label for="coverImage" class="form-label">Product Image</label>
+                <input 
+                type="file" 
+                class="form-control" 
+                id="coverImage" 
+                name="coverImage" 
+                aria-describedby="coverImage"
+                required=""
+                />
+            </div>
+
+            <div class="mb-3">
+                <label for="body">Product Description</label>
+
+               <!-- <div class="editor" name="body" id="body" type="textarea"> -->
+                    <textarea name="body" class="form-control" id="body"
+                    required=""></textarea>
+            <!-- </div> -->
+            
+            
+               
+                
+            </div>
+
+            <div class="mb-3">
+                <label for="price" class="form-label">Product Price</label>
+                <input  
+                type="text" 
+                class="form-control" 
+                id="price" 
+                name="price" 
+                aria-describedby="price"
+                required=""
+                />
+            </div>
+            
+            <div class="mb-3">
+                <label for="heritage">Heritage</label>
+                <input
+                type="text"
+                class="form-control"
+                id="heritage"
+                name="heritage"
+                aria-describedby="heritage"
+                required=""
+                />
+            </div>
+
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input
+                type="text"
+                class="form-control"
+                id="location"
+                name="location"
+                aria-describedby="location"
+                required=""
+                />
+            </div>
+            
+
+            <div class="mb-3">
+                <button type="submit" id="viewBlog">Submit</button>
+            </div>
+        </form>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+    <%- include('./partials/scripts.ejs') %>
+
+</body>
+</html>
